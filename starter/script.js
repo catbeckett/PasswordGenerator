@@ -90,13 +90,13 @@ var passLength = parseInt (prompt("Enter the number of characters - At least 8 c
 //now we are going to validate password length
 if (typeof passLength === "number" && passLength >= 8 && passLength <= 128) {
   var lowerCase = confirm ("Lowercase characters?")  ;
-  var uperCase = confirm ("Upercase characters?");
+  var upperCase = confirm ("Uppercase characters?");
   var numeric = confirm ("Numeric characters?");
   var special = confirm ("Special characters?");
-  if (lowerCase || uperCase || numeric || special ) {
+  if (lowerCase || upperCase || numeric || special ) {
     return {
       passLength: passLength,
-      uperCase: uperCase,
+      uperCase: upperCase,
       lowerCase: lowerCase,
       numeric: numeric,
       special: special,
