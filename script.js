@@ -86,32 +86,46 @@ var upperCasedCharacters = [
 ];
 // Function to prompt user for password options
 function getPasswordOptions() {
-var passLength = parseInt (prompt("Enter the number of characters - At least 8 characters but no more than 128."));
-//now we are going to validate password length
-if (typeof passLength === "number" && passLength >= 8 && passLength <= 128) {
-  var lowerCase = confirm ("Lowercase characters?")  ;
-  var upperCase = confirm ("Uppercase characters?");
-  var numeric = confirm ("Numeric characters?");
-  var special = confirm ("Special characters?");
-  if (lowerCase || upperCase || numeric || special ) {
-    return {
-      passLength: passLength,
-      uperCase: upperCase,
-      lowerCase: lowerCase,
-      numeric: numeric,
-      special: special,
-    };
-    
-  }
+  var passLength = parseInt(prompt("Enter the number of characters - At least 8 characters but no more than 128."));
+  if (typeof passLength === "number" && passLength >= 8 && passLength <= 128) {
+    var lowerCase = confirm("Lowercase characters?");
+    var upperCase = confirm("Uppercase characters?");
+    var numeric = confirm("Numeric characters?");
+    var special = confirm("Special characters?");
+    if (lowerCase || upperCase || numeric || special) {
+      return {
+        passLength: passLength,
+        upperCase: upperCase, 
+        lowerCase: lowerCase,
+        numeric: numeric,
+        special: special,
+      };
 }
+
+return password.join('');
+}
+
 alert ("Please write a valid password.") ;
 }
 // Function for getting a random element from an array
 function getRandom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
 }
-// Function to generate password with user input
-function generatePassword() {
+function generatePassword(length) {
+  var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  var password = "";
+
+  for (var i = 0; i < length; i++) {
+    var randomIndex = Math.floor(Math.random() * charset.length);
+    password += charset.charAt(randomIndex);
+  }
+
+  return password;
 }
+
+var newPassword = generatePassword(8);
+console.log(newPassword);
+  
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 // Write password to the #password input
