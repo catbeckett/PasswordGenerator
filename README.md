@@ -1,6 +1,6 @@
 # Password Generator
 
-This is a simple web application that allows users to generate a random password based on their selected criteria. The application runs in the browser and features dynamically updated HTML and CSS, powered by JavaScript code.
+This is a simple web application that allows users to generate a random password based on their selected criteria. The application runs in the browser and features dynamically updated HTML and CSS, powered by JavaScript code. Please the deployed page for the app here: https://catbeckett.github.io/PasswordGenerator/ 
 
 ## Features
 
@@ -26,5 +26,6 @@ This is a simple web application that allows users to generate a random password
 
 This project is licensed under the MIT License.
 
+## Screenshot
 ![Screenshot of Application 1](assets/Screenshot-PG-1.png)
 ![Screenshot of Application 2](assets/Screenshot-PG-2.png)
