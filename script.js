@@ -57,6 +57,10 @@ return password;
 var generateBtn = document.querySelector('#generate');
 
 
+// Write password to the #password textarea
+function writePassword() {
+  var options = getPasswordOptions();
+
 var newPassword = generatePassword(8);
 console.log(newPassword);
   
