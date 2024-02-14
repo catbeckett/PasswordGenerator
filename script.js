@@ -35,6 +35,15 @@ return null;
 function generatePassword(options) {
   var charset = '';
 
+ // Add selected character types to the charset
+ if (options.lowerCase) charset += lowerCasedCharacters.join('');
+ if (options.upperCase) charset += upperCasedCharacters.join('');
+ if (options.numeric) charset += numericCharacters.join('');
+ if (options.special) charset += specialCharacters.join('');
+
+ var password = '';
+
+
 alert ("Please write a valid password.") ;
 }
 // Function for getting a random element from an array
