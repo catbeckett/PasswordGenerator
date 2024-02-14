@@ -31,6 +31,9 @@ if (lowerCase || upperCase || numeric || special) {
 return null;
 }
 
+// Function to generate password based on options
+function generatePassword(options) {
+  var charset = '';
 
 alert ("Please write a valid password.") ;
 }
