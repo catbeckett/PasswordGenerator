@@ -26,3 +26,5 @@ This is a simple web application that allows users to generate a random password
 
 This project is licensed under the MIT License.
 
+![Screenshot of Application 1](assets/Screenshot-PG-1.png)
+![Screenshot of Application 2](assets/Screenshot-PG-2.png)
