@@ -44,23 +44,15 @@ function generatePassword(options) {
  var password = '';
 
 
-alert ("Please write a valid password.") ;
+// Generate password based on the selected options and length
+for (var i = 0; i < options.passLength; i++) {
+  var randomIndex = Math.floor(Math.random() * charset.length);
+  password += charset.charAt(randomIndex);
 }
-// Function for getting a random element from an array
-function getRandom(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
-function generatePassword(length) {
-  var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-  var password = "";
 
-  for (var i = 0; i < length; i++) {
-    var randomIndex = Math.floor(Math.random() * charset.length);
-    password += charset.charAt(randomIndex);
-  }
-
-  return password;
+return password;
 }
+
 
 var newPassword = generatePassword(8);
 console.log(newPassword);
