@@ -4,9 +4,10 @@ var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var lowerCasedCharacters = 'abcdefghijklmnopqrstuvwxyz'.split('');
 var upperCasedCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
-// Function to prompt user for password options
+/// Function to prompt user for password options
 function getPasswordOptions() {
   var passLength = parseInt(prompt("Enter the number of characters - At least 8 characters but no more than 128."));
+
   if (typeof passLength === "number" && passLength >= 8 && passLength <= 128) {
     var lowerCase = confirm("Lowercase characters?");
     var upperCase = confirm("Uppercase characters?");
