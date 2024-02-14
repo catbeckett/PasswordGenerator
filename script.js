@@ -15,18 +15,22 @@ function getPasswordOptions() {
     var numeric = confirm("Include numeric characters?");
     var special = confirm("Include special characters?");
 
-    if (lowerCase || upperCase || numeric || special) {
-      return {
-        passLength: passLength,
-        upperCase: upperCase, 
-        lowerCase: lowerCase,
-        numeric: numeric,
-        special: special,
-      };
+// Validate that at least one character type is selected
+if (lowerCase || upperCase || numeric || special) {
+  return {
+    passLength: passLength,
+    lowerCase: lowerCase,
+    upperCase: upperCase,
+    numeric: numeric,
+    special: special
+  };
+}
 }
 
-return password.join('');
+// If no valid options are selected, return null
+return null;
 }
+
 
 alert ("Please write a valid password.") ;
 }
