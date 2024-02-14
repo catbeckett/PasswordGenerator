@@ -61,17 +61,16 @@ var generateBtn = document.querySelector('#generate');
 function writePassword() {
   var options = getPasswordOptions();
 
-var newPassword = generatePassword(8);
-console.log(newPassword);
-  
-// Get references to the #generate element
-var generateBtn = document.querySelector('#generate');
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
+// Check if options are selected
+if (options) {
+  var password = generatePassword(options);
   var passwordText = document.querySelector('#password');
-  console.log (getPasswordOptions());
   passwordText.value = password;
+} else {
+  // Alert user to select valid options
+  alert("Please select valid options for generating the password.");
 }
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
