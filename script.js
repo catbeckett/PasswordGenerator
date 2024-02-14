@@ -53,6 +53,9 @@ for (var i = 0; i < options.passLength; i++) {
 return password;
 }
 
+// Get references to the #generate element
+var generateBtn = document.querySelector('#generate');
+
 
 var newPassword = generatePassword(8);
 console.log(newPassword);
