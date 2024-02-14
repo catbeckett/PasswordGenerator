@@ -8,11 +8,13 @@ var upperCasedCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 function getPasswordOptions() {
   var passLength = parseInt(prompt("Enter the number of characters - At least 8 characters but no more than 128."));
 
+  // Validate password length
   if (typeof passLength === "number" && passLength >= 8 && passLength <= 128) {
-    var lowerCase = confirm("Lowercase characters?");
-    var upperCase = confirm("Uppercase characters?");
-    var numeric = confirm("Numeric characters?");
-    var special = confirm("Special characters?");
+    var lowerCase = confirm("Include lowercase characters?");
+    var upperCase = confirm("Include uppercase characters?");
+    var numeric = confirm("Include numeric characters?");
+    var special = confirm("Include special characters?");
+
     if (lowerCase || upperCase || numeric || special) {
       return {
         passLength: passLength,
